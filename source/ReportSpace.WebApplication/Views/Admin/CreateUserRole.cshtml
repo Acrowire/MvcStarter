@@ -1,0 +1,54 @@
+﻿@model ReportSpace.WebApplication.Models.CreateUserRoleViewModel
+@using ReportSpace.Bll
+@{
+    ViewBag.Title = "Create User Role Mapping";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+    List<SelectListItem> roles = ViewBag.Roles;
+    List<SelectListItem> users = ViewBag.Users;
+    
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>CreateUserRoleViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RolePublicId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.RolePublicId, roles, "- Select Role -")
+                @Html.ValidationMessageFor(model => model.RolePublicId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserPublicId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.UserPublicId, users, "- Select User -")
+                @Html.ValidationMessageFor(model => model.UserPublicId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
