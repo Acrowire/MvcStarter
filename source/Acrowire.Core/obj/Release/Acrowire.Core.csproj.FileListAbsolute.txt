@@ -1,0 +1,4 @@
+P:\github\reportspace\source\Acrowire.Core\bin\Release\Acrowire.Core.dll
+P:\github\reportspace\source\Acrowire.Core\bin\Release\Acrowire.Core.pdb
+P:\github\reportspace\source\Acrowire.Core\obj\Release\Acrowire.Core.dll
+P:\github\reportspace\source\Acrowire.Core\obj\Release\Acrowire.Core.pdb

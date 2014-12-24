@@ -1,0 +1,4 @@
+PlatformName=AnyCPU
+Configuration=Release
+WPPAllFilesInSingleFolder=P:\github\reportspace\source\Acrowire.WebApplication\obj\Release\Package\PackageTmp
+WebPublishProfileFile=P:\github\reportspace\source\Acrowire.WebApplication\Properties\PublishProfiles\ACROWINWEB03.pubxml

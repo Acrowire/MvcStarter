@@ -1,0 +1,41 @@
+@model Acrowire.Bll.UsersCollection
+@{
+    ViewBag.Title = "ShowUpdateUserList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Users</h2>
+
+Select the user you want to assign reports
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Organizations </td>
+            <td>Email</td>
+            <td>Edit</td>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @string.Join(", ", item.OrganizationusersCollection.Select( x => x.Organizations.Name)) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>@Html.ActionLink("Edit", "UpdateUserReports", new { userid = item.Id })</td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to Menu", "Index", "Admin")
+</div>

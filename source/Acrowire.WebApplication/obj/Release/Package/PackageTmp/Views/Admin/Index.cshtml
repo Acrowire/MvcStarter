@@ -1,0 +1,54 @@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2><strong>Administration</strong></h2>
+<div class="container">
+    <div class="row">
+        <!--Administration Actions  -->
+        <div class="col-md-3">
+
+            <strong>Security</strong>
+            <ul class="list-group">
+                <li class="list-group-item">@Html.ActionLink("Users", "UserList")</li>
+                <li class="list-group-item">@Html.ActionLink("Roles", "RoleList")</li>
+                <li class="list-group-item">@Html.ActionLink("User Roles", "UserRoleList")</li>
+            </ul>
+
+            <strong>Organizations</strong>
+            <ul class="list-group">
+                <li class="list-group-item">@Html.ActionLink("Organizations", "OrgList")</li>
+                <li class="list-group-item">@Html.ActionLink("Users", "OrgUsersList")</li>
+            </ul>
+            
+            <strong>Reports</strong>
+            <ul class="list-group">
+                <li class="list-group-item">@Html.ActionLink("Reports", "ReportsList", "Reports")</li>
+                <li class="list-group-item">@Html.ActionLink("User Reports", "ShowUserList", "Reports")</li>
+            </ul>
+        </div>
+
+        <!-- PM -->
+        <div class="col-md-3">
+            <strong>Projects</strong>
+            <ul class="list-group">
+                <li class="list-group-item">Projects</li>
+                <li class="list-group-item">Organizations</li>
+                <li class="list-group-item">Create</li>
+            </ul>
+
+            <strong>Tasks</strong>
+            <ul class="list-group">
+                <li class="list-group-item">Tasks</li>
+                <li class="list-group-item">Tasks</li>
+            </ul>
+        </div>
+
+        <!-- Sys -->
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>

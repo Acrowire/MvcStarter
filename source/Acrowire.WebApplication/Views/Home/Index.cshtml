@@ -1,0 +1,40 @@
+
+
+@using Acrowire;
+@using Acrowire.WebApplication;
+@using Acrowire.WebApplication.Extensions;
+@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.Owin;
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Scripts/jsTree3/themes/default/style.css" rel="stylesheet" />
+<script src="~/Scripts/jsTree3/jstree.js"></script>
+
+<div class="jumbotron">
+    <div class="row text-center">
+        <h1 style="font-family: 'Titillium Web', sans-serif;" class="text-center">Client Reports Portal</h1>
+    </div>
+    <div class="row text-center">
+        <i class="fa fa-signal fa-2x"></i>  
+        <i class="fa fa-long-arrow-right"></i>
+        <i class="fa fa-tachometer fa-2x"></i>
+        <i class="fa fa-long-arrow-right"></i>  
+        <i class="fa fa-bar-chart-o fa-2x"></i>
+    </div>
+</div>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="row" style="padding-left: 10px; padding-right: 10px;">
+        <div class="page-header">
+            <h1>@User.Identity.Name</h1>
+        </div>
+    </div>
+    
+    if (User.Identity.HasRole("Client"))
+    {
+        
+    }   
+}

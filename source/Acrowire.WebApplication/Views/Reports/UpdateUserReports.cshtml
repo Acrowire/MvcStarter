@@ -1,0 +1,152 @@
+@using Acrowire.Bll
+@model Dictionary<Acrowire.Bll.Organizations, Acrowire.Bll.ReportsCollection>
+
+@{
+    ViewBag.Title = "UpdateUserReports";
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    List<int> userReportsList = ViewBag.UserReports;
+
+    int total = userReportsList.Count;
+}
+
+<link href="~/Scripts/jsTree3/themes/default/style.css" rel="stylesheet" />
+<script src="~/Scripts/jsTree3/jstree.js"></script>
+
+
+<h2>UpdateUserReports</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "submitform" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="treediv divcenter" >
+        Organizations
+        <div id="demo_div" class="divcenter div250px">
+            <ul class="">
+                @foreach (KeyValuePair<Organizations, ReportsCollection> pair in Model)
+                {
+                    <li id="liorg_@pair.Key.Id" >
+                        <input type="hidden" id="hiorg_@pair.Key.Id" />
+                        <a id="org_@pair.Key.Id" href="#" >@pair.Key.Name</a>
+                
+                        <ul>
+                            @foreach (var report in pair.Value)
+                            {
+                                <li id="lirep_@report.Id">
+                                    <a id="rep_@report.Id" href="#" 
+                                        @if (userReportsList.Contains(@report.Id.Value))
+                                        {
+                                            @("class=jstree-clicked")
+                                        }
+                                        >
+                                        @report.Name
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </li>
+                }
+            </ul>
+        </div>
+    
+        <div class="divcenter div150px">
+            
+            <input id="UserPublicid" type="hidden" value="@ViewBag.Userid" name="UserPublicid" class="btn btn-default" />
+            <input id="selectedcheckboxes" type="hidden" value="0" name="selectedcheckboxes" class="btn btn-default" />
+            <input type="submit" value="Update" class="btn btn-default" />
+            <input id="cancel" type="button" name="cancel" value="Cancel" class="btn btn-default"/>
+        </div>
+    </div>
+    
+    
+}
+
+    
+<script>
+
+    $("#cancel").on("click", function (event) {
+        
+        var url = '@Url.Action("ShowUserList", "Reports", new { })';
+        window.location.href = url;
+    });
+    
+    $('#submitform').submit(function () {
+        var checkedIds = [];
+        $('.jstree-clicked').each(function () {
+            var id = $(this).attr('id');
+            if (id.indexOf('rep') >= 0) {
+                checkedIds.push(id);
+            }
+        });
+        $('#selectedcheckboxes').val(checkedIds.join(","));
+    });
+    
+    $(function () {
+        
+        $("#demo_div").jstree({
+            themes: {
+                theme: 'default'
+            },
+            "plugins": ["themes", "html_data", "checkbox", "types"],
+            "checkbox": {
+                "real_checkboxes": true,
+                "two_state": true
+            }
+        });
+        
+        $('#demo_div').jstree('open_all');
+        
+        //$('#demo_div').jstree({
+        //    "checkbox": {
+        //        real_checkboxes: true,
+                
+        //    },
+        //    "plugins": ["themes", "html_data", , "ui", "checkbox", "sort"]
+        //}).bind("loaded.jstree", function (event, data) {
+        //    $('#demo_div').jstree('check_node', 'li[selected=selected]');
+        //});
+        
+
+        //$('#demo_div').jstree({
+        //    ui: { theme_name: "checkbox" },
+        //    "checkbox": {
+        //        real_checkboxes: true,
+        //    },
+        //    plugins: ["checkbox", "themes", "html_data", "ui", "sort"]
+        //});
+        
+
+    });
+    
+    function generateHiddenFieldsForTree(treeId) {
+        $.tree.plugins.checkbox.get_checked($.tree.reference("#" + treeId)).each(function () {
+            var checkedId = this.id;
+            $("<input>").attr("type", "hidden").attr("name", checkedId).val("on").appendTo("#" + treeId);
+        });
+    }
+
+
+    
+    $(function() {
+        $("#submitform").submit(function() {
+            //generateHiddenFieldsForTree("demo_div");
+        });
+    });
+    
+    //$('#demo_div').on("changed.jstree", function (e, data) {
+    //    alert('changed');
+    //});
+    
+</script>
+
+
+        @*<li>Root node 1</li>
+        <li>Root node 2</li>
+        <li> Node 3
+            <ul>
+                <li>Root node 4</li>
+                <li>Root node 5</li>
+            </ul>
+        </li>*@

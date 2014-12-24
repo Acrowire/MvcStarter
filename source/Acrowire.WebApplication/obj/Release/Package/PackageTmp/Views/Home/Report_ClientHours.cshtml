@@ -1,0 +1,64 @@
+@using System.Dynamic
+@model Dictionary<string,string>
+@{
+    string clientName = Model["client"];
+    ViewBag.Title = "Report / Client Hours";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .year_row {
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.75);
+    }
+</style>
+
+<h2 class="page-header" style="font-family: 'Titillium Web', sans-serif;">Client Project Hours Report</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Click the <span class="glyphicon glyphicon-plus"></span> to expand details.
+                </li>
+            </ul>
+            <div id="analytics-area">
+
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <table id="report_table" class="table table-hover">
+                <thead id="report_header">
+                    <tr>
+                        <td>Organization</td>
+                        <td>Project</td>
+                        <td>Year</td>
+                        <td>Month</td>
+                        <td>Ticket</td>
+                        <td>Hours</td>
+                    </tr>
+                </thead>
+                <tbody id="report_body"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    @section Scripts {
+        
+        <script type="text/javascript">
+            window.ReportName = "Report_ClientHoursData";
+            window.Clientparams = 'ClientName=@clientName';
+            
+            var _clientname = '@clientName';
+        </script>
+        @Scripts.Render("~/bundles/app")
+    }
+
+</div>
+'

@@ -1,0 +1,14 @@
+P:\github\reportspace\source\Acrowire.Data\bin\Debug\Acrowire.Data.dll
+P:\github\reportspace\source\Acrowire.Data\bin\Debug\Acrowire.Data.pdb
+P:\github\reportspace\source\Acrowire.Data\bin\Debug\Acrowire.Core.dll
+P:\github\reportspace\source\Acrowire.Data\bin\Debug\Acrowire.Core.pdb
+P:\github\reportspace\source\Acrowire.Data\obj\Debug\Acrowire.Data.csprojResolveAssemblyReference.cache
+P:\github\reportspace\source\Acrowire.Data\obj\Debug\Acrowire.Data.dll
+P:\github\reportspace\source\Acrowire.Data\obj\Debug\Acrowire.Data.pdb
+P:\Output\source\Acrowire.Data\bin\Debug\Acrowire.Data.dll
+P:\Output\source\Acrowire.Data\bin\Debug\Acrowire.Data.pdb
+P:\Output\source\Acrowire.Data\bin\Debug\Acrowire.Core.dll
+P:\Output\source\Acrowire.Data\bin\Debug\Acrowire.Core.pdb
+P:\Output\source\Acrowire.Data\obj\Debug\Acrowire.Data.csprojResolveAssemblyReference.cache
+P:\Output\source\Acrowire.Data\obj\Debug\Acrowire.Data.dll
+P:\Output\source\Acrowire.Data\obj\Debug\Acrowire.Data.pdb

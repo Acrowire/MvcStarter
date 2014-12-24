@@ -1,0 +1,37 @@
+@model IEnumerable<Acrowire.Bll.Organizations>
+
+@{
+    ViewBag.Title = "OrgList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>OrgList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "NewOrg")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Active</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Active)
+                </td>
+                <td>@Html.ActionLink("Edit", "EditOrg", new { PublicId = item.Publicid })</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { PublicId = item.Publicid })</td>
+            </tr>
+        }
+
+</table>

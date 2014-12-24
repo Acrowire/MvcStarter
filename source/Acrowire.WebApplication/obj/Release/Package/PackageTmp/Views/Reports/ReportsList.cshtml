@@ -1,0 +1,48 @@
+@model IEnumerable<Acrowire.Bll.Reports>
+@{
+    ViewBag.Title = "Reports List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reports</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateReport")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Organization</td>
+            <td>Controller</td>
+            <td>Action</td>
+            
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Organizations.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Controller)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Action)
+                </td>
+                <td>@Html.ActionLink("Edit", "EditReport", new { PublicId = item.Publicid })</td>
+                <td>@Html.ActionLink("Delete", "DeleteReport", new { PublicId = item.Publicid })</td>
+            </tr>
+        }
+
+</table>
+<div>
+    @Html.ActionLink("Back to Menu", "Index", "Admin")
+</div>

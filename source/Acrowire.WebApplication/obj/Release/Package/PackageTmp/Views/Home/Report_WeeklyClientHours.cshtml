@@ -1,0 +1,58 @@
+ @using System.Dynamic
+
+ @model Dictionary<string, string> 
+ @{
+     string clientName = Model["client"];
+     ViewBag.Title = "Report / Weekly Client Hours";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+ }
+ 
+ 
+ <style>
+     .year_row {
+         -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.75);
+         -moz-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.75);
+         box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.75);
+     }
+ </style> 
+ <h2 class="page-header" style="font-family: 'Titillium Web', sans-serif;">Client Project Hours Report</h2>
+ <div class="container-fluid">
+     <div class="row">
+         <div class="col-sm-12">
+             <span>Get Data From: </span>
+             <select id="weekselector">
+             </select>
+         </div>
+     </div>
+     
+     <div class="tablecontainer">
+         <div class="tablediv">
+             <!-- HERE -->
+             <table id="report_table" class="table table-hover" style="width: 450px">
+                 <thead id="report_header">
+                     <tr class="odd_gradeX">
+                         <th class="read_only">Project</th>
+                         <th>User</th>
+                         <th>Total hours</th>
+                         <th>Billable hours</th>
+                         <th>Gross revenue</th>
+                         <th>Direct labor</th>
+                     </tr>
+                 </thead>
+                 <tbody id="tbodytable"></tbody>
+             </table>
+         </div>
+
+         <div class="graphdiv">
+             <!-- HERE -->
+             <div id="analytics-area" style="height: 150px">
+             </div>
+         </div>
+     </div>
+     
+     <div style="clear: both"></div>
+     <br/>
+    @section Scripts {
+        @Scripts.Render("~/scripts/app/weeklyReport.js");
+    }
+</div>

@@ -1,0 +1,15 @@
+{
+  "name": "dimple",
+  "homepage": "https://github.com/PMSI-AlignAlytics/dimple",
+  "version": "2.0.0",
+  "_release": "2.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.0",
+    "commit": "86efa631b4fce92dfab2a56eee1a8b23669de6d0"
+  },
+  "_source": "git://github.com/PMSI-AlignAlytics/dimple.git",
+  "_target": "~2.0.0",
+  "_originalSource": "dimple",
+  "_direct": true
+}

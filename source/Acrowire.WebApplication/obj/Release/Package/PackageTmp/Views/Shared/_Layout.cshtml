@@ -1,0 +1,60 @@
+
+@using Acrowire;
+@using Acrowire.WebApplication;
+@using Acrowire.WebApplication.Extensions;
+@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.Owin;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Acrowire Reports</title>
+    
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar  navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand"><img src='http://acrowire.com/welcome/wp-content/themes/acrowire/images/logo-footer.png' height="26" style="margin-top:-5px" /></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Reports", "Index", "Home")</li>
+                    @if (User.Identity.IsAuthenticated && User.Identity.HasRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Admin", "Index", "Admin")</li>
+                    }
+                </ul>
+             
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p><strong>&copy; @DateTime.Now.Year - <a href="http://www.acrowire.com">Acrowire, LLC</a></strong></p>
+        </footer>
+    </div>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquerydatatables")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/moment")
+    @Scripts.Render("~/bundles/analytics")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,52 @@
+@model Acrowire.WebApplication.Models.CreateOrgUserViewModel
+
+@{
+    ViewBag.Title = "Create Organization User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<SelectListItem> orgs = ViewBag.orgs;
+    List<SelectListItem> users = ViewBag.users;
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>CreateOrgUserViewModel</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OrganizationPublicId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.OrganizationPublicId, orgs, "- Select Organization -")
+                @Html.ValidationMessageFor(model => model.OrganizationPublicId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UserPublicId, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.UserPublicId, users, "- Select User -")
+                @Html.ValidationMessageFor(model => model.UserPublicId)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

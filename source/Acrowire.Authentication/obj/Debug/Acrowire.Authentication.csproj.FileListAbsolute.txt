@@ -1,0 +1,9 @@
+P:\Output\source\Acrowire.Authentication\bin\Debug\Acrowire.Authentication.dll
+P:\Output\source\Acrowire.Authentication\bin\Debug\Acrowire.Authentication.pdb
+P:\Output\source\Acrowire.Authentication\bin\Debug\Acrowire.Core.dll
+P:\Output\source\Acrowire.Authentication\bin\Debug\Acrowire.Data.dll
+P:\Output\source\Acrowire.Authentication\bin\Debug\Acrowire.Core.pdb
+P:\Output\source\Acrowire.Authentication\bin\Debug\Acrowire.Data.pdb
+P:\Output\source\Acrowire.Authentication\obj\Debug\Acrowire.Authentication.csprojResolveAssemblyReference.cache
+P:\Output\source\Acrowire.Authentication\obj\Debug\Acrowire.Authentication.dll
+P:\Output\source\Acrowire.Authentication\obj\Debug\Acrowire.Authentication.pdb
