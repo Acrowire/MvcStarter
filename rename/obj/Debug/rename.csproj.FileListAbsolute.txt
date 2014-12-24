@@ -1,0 +1,6 @@
+p:\github\rename\rename\bin\Debug\rename.exe.config
+p:\github\rename\rename\bin\Debug\rename.exe
+p:\github\rename\rename\bin\Debug\rename.pdb
+p:\github\rename\rename\obj\Debug\rename.csprojResolveAssemblyReference.cache
+p:\github\rename\rename\obj\Debug\rename.exe
+p:\github\rename\rename\obj\Debug\rename.pdb
