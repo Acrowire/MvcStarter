@@ -1,5 +1,0 @@
-P:\github\MvcStarter\source\ReportSpace.Tests\bin\Debug\ReportSpace.Tests.dll
-P:\github\MvcStarter\source\ReportSpace.Tests\bin\Debug\ReportSpace.Tests.pdb
-P:\github\MvcStarter\source\ReportSpace.Tests\obj\Debug\ReportSpace.Tests.csprojResolveAssemblyReference.cache
-P:\github\MvcStarter\source\ReportSpace.Tests\obj\Debug\ReportSpace.Tests.dll
-P:\github\MvcStarter\source\ReportSpace.Tests\obj\Debug\ReportSpace.Tests.pdb
