@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4EEC57A-73F8-4912-AFE7-85F1F1F23AFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Acrowire.Authentication</RootNamespace>
+    <AssemblyName>Acrowire.Authentication</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bll\Exceptions\RolesException.cs" />
+    <Compile Include="Bll\Exceptions\UserReportsException.cs" />
+    <Compile Include="Bll\Exceptions\UsersException.cs" />
+    <Compile Include="Bll\Exceptions\UsersRolesException.cs" />
+    <Compile Include="Bll\Extensions.cs" />
+    <Compile Include="Bll\GlobalTools.cs" />
+    <Compile Include="Bll\GlobalTools.generated.cs" />
+    <Compile Include="Bll\Roles.cs" />
+    <Compile Include="Bll\Roles.generated.cs" />
+    <Compile Include="Bll\RolesCollection.cs" />
+    <Compile Include="Bll\RolesCollection.generated.cs" />
+    <Compile Include="Bll\Userroles.cs" />
+    <Compile Include="Bll\Userroles.generated.cs" />
+    <Compile Include="Bll\UserrolesCollection.cs" />
+    <Compile Include="Bll\UserrolesCollection.generated.cs" />
+    <Compile Include="Bll\Users.cs" />
+    <Compile Include="Bll\Users.generated.cs" />
+    <Compile Include="Bll\UsersCollection.cs" />
+    <Compile Include="Bll\UsersCollection.generated.cs" />
+    <Compile Include="Dal\Reports.cs" />
+    <Compile Include="Dal\Reports.generated.cs" />
+    <Compile Include="Dal\Roles.cs" />
+    <Compile Include="Dal\Roles.generated.cs" />
+    <Compile Include="Dal\UserReports.cs" />
+    <Compile Include="Dal\UserReports.generated.cs" />
+    <Compile Include="Dal\Userroles.cs" />
+    <Compile Include="Dal\Userroles.generated.cs" />
+    <Compile Include="Dal\Users.cs" />
+    <Compile Include="Dal\Users.generated.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Acrowire.Core\Acrowire.Core.csproj">
+      <Project>{61d64cfa-9d07-4207-9378-e29e56cb39d8}</Project>
+      <Name>Acrowire.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Acrowire.Data\Acrowire.Data.csproj">
+      <Project>{75bc0de9-59c7-49c5-90db-a5de578521fd}</Project>
+      <Name>Acrowire.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

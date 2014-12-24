@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[0] Support", "[0] Support", "{399B5B2C-0802-4781-822D-536FC5FDD6FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[1] Lib", "[1] Lib", "{737F8ED4-9EC5-4F58-BDCE-51AB7A527F1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[0] Core", "[0] Core", "{E17D6D48-E193-4994-A554-26F246AFD761}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acrowire.Core", "..\..\libs\Acrowire.Core\Acrowire.Core.csproj", "{61D64CFA-9D07-4207-9378-E29E56CB39D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[1] Data", "[1] Data", "{5A6181A8-F952-49B7-9FC7-FB6B8EE612CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acrowire.Data", "..\..\libs\Acrowire.Data\Acrowire.Data.csproj", "{75BC0DE9-59C7-49C5-90DB-A5DE578521FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acrowire.Authentication", "..\..\libs\Acrowire.Authentication\Acrowire.Authentication.csproj", "{A4EEC57A-73F8-4912-AFE7-85F1F1F23AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acrowire.Application", "..\..\libs\Acrowire.Application\Acrowire.Application.csproj", "{A6044E35-3ED6-48E3-94A6-AE59464840D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{039A59B1-03C7-4812-8BC0-8EA9E1CFB919}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[2] Authentication", "[2] Authentication", "{AD6125E4-015D-4B08-A608-986E659CE7DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[3] Application", "[3] Application", "{93D1785F-54B6-4128-8249-91209E4355E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[2] Api", "[2] Api", "{EFD9F98F-1E24-433C-A8DE-3FBAB51A61D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "[3] Tests", "[3] Tests", "{DBCE33DE-6716-4C76-8BD9-6281B7CDF921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acrowire.Api.Tests", "..\Acrowire.Api.Tests\Acrowire.Api.Tests.csproj", "{BD3F728E-F41F-492A-B969-37510CB291FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acrowire.Api", "Acrowire.Api\Acrowire.Api.csproj", "{B0B4D148-2EB3-42CA-9ABD-A85C292C7D9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61D64CFA-9D07-4207-9378-E29E56CB39D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D64CFA-9D07-4207-9378-E29E56CB39D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D64CFA-9D07-4207-9378-E29E56CB39D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D64CFA-9D07-4207-9378-E29E56CB39D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75BC0DE9-59C7-49C5-90DB-A5DE578521FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75BC0DE9-59C7-49C5-90DB-A5DE578521FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75BC0DE9-59C7-49C5-90DB-A5DE578521FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75BC0DE9-59C7-49C5-90DB-A5DE578521FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4EEC57A-73F8-4912-AFE7-85F1F1F23AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4EEC57A-73F8-4912-AFE7-85F1F1F23AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4EEC57A-73F8-4912-AFE7-85F1F1F23AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4EEC57A-73F8-4912-AFE7-85F1F1F23AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6044E35-3ED6-48E3-94A6-AE59464840D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6044E35-3ED6-48E3-94A6-AE59464840D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6044E35-3ED6-48E3-94A6-AE59464840D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6044E35-3ED6-48E3-94A6-AE59464840D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3F728E-F41F-492A-B969-37510CB291FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3F728E-F41F-492A-B969-37510CB291FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3F728E-F41F-492A-B969-37510CB291FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3F728E-F41F-492A-B969-37510CB291FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0B4D148-2EB3-42CA-9ABD-A85C292C7D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B4D148-2EB3-42CA-9ABD-A85C292C7D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B4D148-2EB3-42CA-9ABD-A85C292C7D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B4D148-2EB3-42CA-9ABD-A85C292C7D9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E17D6D48-E193-4994-A554-26F246AFD761} = {737F8ED4-9EC5-4F58-BDCE-51AB7A527F1A}
+		{61D64CFA-9D07-4207-9378-E29E56CB39D8} = {E17D6D48-E193-4994-A554-26F246AFD761}
+		{5A6181A8-F952-49B7-9FC7-FB6B8EE612CD} = {737F8ED4-9EC5-4F58-BDCE-51AB7A527F1A}
+		{75BC0DE9-59C7-49C5-90DB-A5DE578521FD} = {5A6181A8-F952-49B7-9FC7-FB6B8EE612CD}
+		{A4EEC57A-73F8-4912-AFE7-85F1F1F23AFA} = {AD6125E4-015D-4B08-A608-986E659CE7DE}
+		{A6044E35-3ED6-48E3-94A6-AE59464840D1} = {93D1785F-54B6-4128-8249-91209E4355E5}
+		{AD6125E4-015D-4B08-A608-986E659CE7DE} = {737F8ED4-9EC5-4F58-BDCE-51AB7A527F1A}
+		{93D1785F-54B6-4128-8249-91209E4355E5} = {737F8ED4-9EC5-4F58-BDCE-51AB7A527F1A}
+		{BD3F728E-F41F-492A-B969-37510CB291FC} = {DBCE33DE-6716-4C76-8BD9-6281B7CDF921}
+		{B0B4D148-2EB3-42CA-9ABD-A85C292C7D9E} = {EFD9F98F-1E24-433C-A8DE-3FBAB51A61D8}
+	EndGlobalSection
+EndGlobal

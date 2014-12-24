@@ -1,0 +1,7 @@
+P:\github\reportspace\source\Acrowire.Data\bin\Release\Acrowire.Data.dll
+P:\github\reportspace\source\Acrowire.Data\bin\Release\Acrowire.Data.pdb
+P:\github\reportspace\source\Acrowire.Data\bin\Release\Acrowire.Core.dll
+P:\github\reportspace\source\Acrowire.Data\bin\Release\Acrowire.Core.pdb
+P:\github\reportspace\source\Acrowire.Data\obj\Release\Acrowire.Data.csprojResolveAssemblyReference.cache
+P:\github\reportspace\source\Acrowire.Data\obj\Release\Acrowire.Data.dll
+P:\github\reportspace\source\Acrowire.Data\obj\Release\Acrowire.Data.pdb

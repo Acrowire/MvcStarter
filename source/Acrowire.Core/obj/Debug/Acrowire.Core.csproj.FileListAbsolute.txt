@@ -7,3 +7,8 @@ P:\Output\source\Acrowire.Core\bin\Debug\Acrowire.Core.dll
 P:\Output\source\Acrowire.Core\bin\Debug\Acrowire.Core.pdb
 P:\Output\source\Acrowire.Core\obj\Debug\Acrowire.Core.dll
 P:\Output\source\Acrowire.Core\obj\Debug\Acrowire.Core.pdb
+E:\github\MvcStarter\source\Acrowire.Core\bin\Debug\Acrowire.Core.dll
+E:\github\MvcStarter\source\Acrowire.Core\bin\Debug\Acrowire.Core.pdb
+E:\github\MvcStarter\source\Acrowire.Core\obj\Debug\Acrowire.Core.csprojResolveAssemblyReference.cache
+E:\github\MvcStarter\source\Acrowire.Core\obj\Debug\Acrowire.Core.dll
+E:\github\MvcStarter\source\Acrowire.Core\obj\Debug\Acrowire.Core.pdb
